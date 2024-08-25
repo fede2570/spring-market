@@ -32,4 +32,9 @@ public class Producto {
 
     private Boolean estado;
 
+    @ManyToOne      //Muchos a uno
+    //Anotacion para que no se borre ni inserte una nueva categoria
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false)     //Relacion id_categoria
+    private Categoria categoria;
+
 }
